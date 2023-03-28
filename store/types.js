@@ -1,0 +1,1 @@
+export const SET_BLOGDETAIL = 'SET_BLOGDETAIL';

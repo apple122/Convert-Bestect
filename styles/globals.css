@@ -1,0 +1,158 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    background: #eef0f5;
+    font-family: Phetsarath_OT, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+      "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+      "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    user-select: none;
+  }
+@font-face {
+    font-family: 'Phetsarath_OT';
+    src: url('../public/Font/phetsarath_ot.ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.animations-text-cur{
+    position:relative;
+    font-family:sans-serif;
+    -webkit-text-stroke:1.1vw #2843ad21;
+    text-transform:uppercase;
+}
+
+.animations-text-cur::before{
+    content: attr(data-text);
+    position:absolute;
+    top:0;
+    left:0;
+    width:0%;
+    height:100%;
+    color: #0037ce;
+    -webkit-text-stroke:0vw #648aad34;
+    border-right:5px solid #0037ce;
+    overflow:hidden;
+    animation:animate 10s linear infinite;
+}
+
+@keyframes animate{
+    0%{
+    width:0;
+}
+70%{
+    width:105%;
+}
+}
+
+
+@media (min-width: 1000px) {
+    .animationsTB {
+        transition: all .5s;
+        animation: ANTB 2s infinite alternate;
+    }
+    .animationsTB3 {
+        transition: all .5s;
+        animation: ANTB 3s infinite alternate;
+    }
+    .animationsTB3-5 {
+        transition: all .5s;
+        animation: ANTB 3.5s infinite alternate;
+    }
+    .animationscal {
+        transition: all .5s;
+        animation: Ascale 2s infinite alternate;
+    }
+}
+@media (max-width: 1000px) {
+    .animationsCOLOR {
+        transition: all .5s;
+        animation: ANTBCOLOR 1s infinite alternate;
+    }
+}
+
+@keyframes ANTB {
+    0% {transform: translateY(5%);}
+    100% {transform: translateY(-5%);}
+}
+
+@keyframes ANTBCOLOR {
+    0% {opacity: calc(0.5);}
+    100% {opacity: calc(1);}
+}
+@keyframes Ascale {
+    0% {transform: scale(.95);}
+    100% {transform: scale(.99);}
+}
+
+@media (min-width: 768px) {
+    .SEO1 {
+        transform: translateY(100%);
+        animation: SEOOne 1s infinite alternate;
+    }
+    .SEO3 {
+        animation: SEOthree 1s infinite alternate;
+    }
+    .SEO4 {
+        animation: SEOflow 1s infinite alternate;
+    }
+}
+@media (max-width: 768px) {
+    .SEO1 {
+        transform: translateY(100%);
+        animation: SEOOneO 1s infinite alternate;
+    }
+    .SEO3 {
+        animation: SEOthree 1s infinite alternate;
+    }
+    .SEO4 {
+        animation: SEOflow 1s infinite alternate;
+    }
+}
+
+@keyframes SEOOneO {
+    0% {
+        opacity: calc(0);
+        transform: translateY(100%);
+    }
+    50% {
+        opacity: calc(1);
+        transform: translateY(0%);
+    }
+    100% {
+        opacity: calc(1);
+        transform: translateY(0%);
+    }
+}
+@keyframes SEOOne {
+    0% {
+        opacity: calc(0);
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: calc(1);
+        transform: translateY(0%);
+    }
+}
+@keyframes SEOthree {
+    0% {
+        opacity: calc(1);
+        transform: translateY(0%);
+    }
+    100% {
+        opacity: calc(0);
+        transform: translateY(100%);
+    }
+}
+@keyframes SEOflow {
+    0% {
+        opacity: calc(0);
+        transform: translateY(10%);
+    }
+    100% {
+        opacity: calc(1);
+        transform: translateY(0%);
+    }
+}
