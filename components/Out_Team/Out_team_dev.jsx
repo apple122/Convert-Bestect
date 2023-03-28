@@ -12,9 +12,8 @@ export default function Out_team_dev() {
 
     const [API, setAPI] = useState([])
     const [APIHW, setHW] = useState([])
-    let url = 'https://raw.githubusercontent.com/apple122/RES-API/API/example.json'
     useEffect(() => {
-        axios.get(url).then((res) => {
+        axios.get(db_out_team.context).then((res) => {
             setAPI(res.data[0].context)
             setHW(res.data[0])
         })

@@ -12,9 +12,10 @@ import { Footer } from "../components/Footer/Footer";
 import { About } from "../components/About/About";
 import Skeleton_page from "../components/elements/skeleton/Skeleton_page";
 import Skeleton_navbar from "../components/elements/skeleton/Skeleton_navbar";
-import Service from "../components/Hero/Our_Service"
+import Service from "../components/Out-service/Our_Service"
 import Performance from "../components/Performance/Index";
 import 'flowbite-react'
+import News from "../components/News/Index";
 
 
 export default function index() {
@@ -50,6 +51,7 @@ export default function index() {
           <div className={`SEO${Time === 4 ? 4 : 5}`}><Navbar /></div>
           <div className={`SEO${Time === 4 ? 4 : 5} overflow-hidden`}>
             <Hero />
+            <News />
             <Service />
             <Performance />
             <Out_team />

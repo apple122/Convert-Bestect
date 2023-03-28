@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Integrations from "../../public/flex-ui-assets/icons/digital.png";
 import online from "../../public/flex-ui-assets/icons/online-shopping.png";
@@ -9,11 +9,20 @@ import WA from "../../public/flex-ui-assets/icons/whatsapp.png";
 import FB from "../../public/flex-ui-assets/icons/facebook.png";
 import Money from "../../public/flex-ui-assets/icons/funds.png";
 import features from "../../public/flex-ui-assets/images/uxui/features-image.png";
+import { db_news } from '../../util/data'
+import axios from "axios";
 
 export default function Our_Service() {
-  return (
-    <div data-aos="fade-up" className='md:flex justify-center grid-cols-2 gap-4 w-full -mt-64 pb-[5%]'>
 
+  const [API, setAPI] = useState([])
+    useEffect(() => {
+        axios.get(db_news.context).then((res) => {
+            setAPI(res.data[2].context)
+        })
+    }, [])
+
+  return (
+    <div data-aos="fade-up" className={`md:flex justify-center grid-cols-2 gap-4 w-full ${API.filter((e) => e.status === true).length !== 0 ? '' : '-mt-64'} pb-[5%]`}>
       <div className="w-full md:h-screen md:flex justify-center items-center" id="services">
         <div className="text-start w-96 text-black md:p-0 p-5 dark:text-white text-xl backdrop-blur-sm rounded">
           <p className='font text-3xl font-bold underline decoration-sky-500/30 py-2'>Our Service</p>
@@ -40,7 +49,7 @@ export default function Our_Service() {
           </div>
         </div>
       </div>
-      <div className="select-none w-full h-full md:h-full pt-20 lg:py-0 relative grid-cols-4 2xl:-mt-0 -mt-10">
+      <div className="select-none w-full h-full md:h-full pt-20 lg:py-0 relative grid-cols-4 2xl:mt-0 mt-10">
         <div className="absolute z-1 lg:top-0 top-20">
           <Image src={features} alt='IMG' />
         </div>

@@ -132,13 +132,15 @@ export const dMarketingContent = {
 };
 
 export const db_out_team = {
-  headline: "ຜູ້ບໍລິຫານ",
-  wallpaper: "/flex-ui-assets/images/out_team/Wallapper.png",
-  context: 'https://script.google.com/macros/s/AKfycbyVS09LoYHWuv9jT2bDmHqgATWh0tSgQ9tfmhrKpu5k092O_3wBeUNlJWIF0fWCQKOx/exec'
+  context: 'https://raw.githubusercontent.com/apple122/RES-API/API/example.json'
 }
 
 export const db_performance = {
-  context: 'https://script.google.com/macros/s/AKfycbxi8pnGRb7C4NdsBMRr4H51dgxBKSCUibK1xT_a7YMy1yDldn9EZ3snL_QcqYhRFzeSzg/exec',
+  context: 'https://raw.githubusercontent.com/apple122/RES-API/API/example.json',
+}
+
+export const db_news = {
+  context: 'https://raw.githubusercontent.com/apple122/RES-API/API/example.json',
 }
 
 export const dMarketingImage = [
