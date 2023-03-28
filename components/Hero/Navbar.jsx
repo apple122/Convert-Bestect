@@ -107,7 +107,7 @@ export default function Navbar() {
               <li onClick={() => setActive(1)}>
                 <a
                   href="#News"
-                  className={`block py-2 text-lg pl-3 pr-4 md:hover:border-b-4 rounded md:rounded-none dark:hover:bg-gray-900 dark:md:hover:bg-black md:bg-transparent ${active === 1
+                  className={`ANMCAL block py-2 text-lg pl-3 pr-4 md:hover:border-b-4 rounded md:rounded-none dark:hover:bg-gray-900 dark:md:hover:bg-black md:bg-transparent ${active === 1
                       ? scrollY > 10
                         ? "text-white bg-blue-700 md:border-b-4"
                         : "md:text-blue-700 text-white bg-blue-700 md:border-b-4"
@@ -116,7 +116,7 @@ export default function Navbar() {
                         : "text-gray-700"
                     } md:p-0 dark:text-white`}
                 >
-                  ຂ່າວສານໃໝ່
+                  ປະກາດ
                 </a>
               </li>
               : ''}

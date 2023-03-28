@@ -39,7 +39,7 @@ export default function News() {
 
                     <>
                         <div className="xl:absolute w-[80%] xl:w-full z-20 top-[21%] left-[24%]">
-                            <a href="#" className="p-0.5 backdrop-blur-3xl hover:text-white text-black dark:text-white inline-flex items-center justify-center font-bold overflow-hidden group rounded-lg">
+                            <a href="#contact" className="p-0.5 backdrop-blur-3xl hover:text-white text-black dark:text-white inline-flex items-center justify-center font-bold overflow-hidden group rounded-lg">
                                 <span className="w-full h-full bg-gradient-to-br backdrop-blur-3xl from-[#ff8a05] via-[#ff5478] to-[#ff00c6] group-hover:from-[#ff00c6] group-hover:via-[#ff5478] group-hover:to-[#ff8a05] absolute"></span>
                                 <span className="relative px-5 py-2 transition-all ease-in-out backdrop-blur-3xl bg-white dark:bg-black rounded-lg group-hover:bg-opacity-0 duration-400">
                                     <span className="relative">News</span>

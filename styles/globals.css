@@ -73,6 +73,16 @@ html {
     }
 }
 
+.ANMCAL {
+    transition: all .5s;
+    animation: ANMCAL 1s infinite alternate;
+}
+
+@keyframes ANMCAL {
+    0% {opacity: calc(0.5);}
+    100% {opacity: calc(1);}
+}
+
 @keyframes ANTB {
     0% {transform: translateY(5%);}
     100% {transform: translateY(-5%);}
